@@ -4,18 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
-    <script src="hello.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>HELLO!!</title>
 </head>
-<body>    
-    <script>
-        $(document).ready(function(){
-            $("#botton").click(function(){
-                $("body").addClass("animated hinge");
-            });
-        });
-    </script>
+<body>
     <header>
         <h2>---HELLO!! 我是郭彥瑢! 以下是關於我的一些小事!!---</h2>
     </header>
@@ -32,8 +24,8 @@
         <p>
             我目前已學會使用的語言包含：
         </p>
-        <button type="中文">中文</button>
-        <button class="btn btn-default target" id="英文">英文</button>
+        <button class="btn btn-default target" id="chinese">中文</button>
+        <button class="btn btn-default target" id="english">英文</button>
     </section>
 
     <section>
@@ -45,5 +37,15 @@
         <button class="btn btn-default target" id="C++">C++</button>
         <button class="btn btn-default target" id="Java">Java</button>
     </section>
+    
+    <script>
+        $(document).ready(function(){
+            $(".target").click(function(){
+                $("body").slideDown(500, function() {
+                    alert("點擊有效！  歡迎光臨郭彥瑢的小事!!!");
+                });
+            });
+        });
+    </script>
 </body>
 </html>
